@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 public class Calculator {
     static Scanner scanner = new Scanner(System.in);
@@ -7,14 +9,34 @@ public class Calculator {
         double num2 = getDouble();
         char operation = getOperation();
         double result = itog(num1,num2,operation);
-        System.out.println("Результат операции: "+result);
+        System.out.println("Результат операции: " + result);
 
         ArrayList<Double> chislo = new ArrayList<>();
         chislo.add(num1);
         chislo.add(num2);
         chislo.add(result);
-        System.out.println("Массив значений: " + chislo);
+        System.out.println("Список значений: " + chislo);
 
+        HashSet<Double> myHashSet = new HashSet<Double>();
+        myHashSet.add(num1);
+        myHashSet.add(num2);
+        myHashSet.add(result);
+
+            System.out.print("Множество значений: ");
+            for (double i : myHashSet)
+                System.out.print(i + "   ");
+                System.out.println();
+
+
+        PriorityQueue<Double> myPriorityQueue = new PriorityQueue<Double>();
+        myPriorityQueue.add(num1);
+        myPriorityQueue.add(num2);
+        myPriorityQueue.add(result);
+
+            System.out.print("Очередь: ");
+            for (double j : myPriorityQueue)
+                System.out.print(j + "   ");
+                System.out.println();
     }
 
 

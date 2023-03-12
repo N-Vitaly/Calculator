@@ -1,13 +1,23 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Calculator {
     static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         double num1 = getDouble();
         double num2 = getDouble();
         char operation = getOperation();
         double result = itog(num1,num2,operation);
         System.out.println("Результат операции: "+result);
+
+        ArrayList<Double> chislo = new ArrayList<>();
+        chislo.add(num1);
+        chislo.add(num2);
+        chislo.add(result);
+        System.out.println("Массив значений: " + chislo);
+
     }
+
+
     private static double getDouble() {
         System.out.println("Введите число:");
         double num;
@@ -46,4 +56,6 @@ public class Calculator {
         }
         return result;
     }
+
+
 }

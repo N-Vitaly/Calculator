@@ -21,24 +21,15 @@ public class Calculator {
         myHashSet.add(num1);
         myHashSet.add(num2);
         myHashSet.add(result);
-
-            System.out.print("Множество значений: ");
-            for (double i : myHashSet)
-                System.out.print(i + "   ");
-                System.out.println();
+        System.out.println("Множество значений: " + myHashSet);
 
 
         PriorityQueue<Double> myPriorityQueue = new PriorityQueue<Double>();
         myPriorityQueue.add(num1);
         myPriorityQueue.add(num2);
         myPriorityQueue.add(result);
-
-            System.out.print("Очередь: ");
-            for (double j : myPriorityQueue)
-                System.out.print(j + "   ");
-                System.out.println();
+        System.out.println("Очередь: " + myPriorityQueue);
     }
-
 
     private static double getDouble() {
         System.out.println("Введите число:");

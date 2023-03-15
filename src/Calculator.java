@@ -4,11 +4,15 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 public class Calculator {
     static Scanner scanner = new Scanner(System.in);
-        public static void main(String[] args) {
-        double num1 = getDouble();
-        double num2 = getDouble();
-        char operation = getOperation();
-        double result = itog(num1,num2,operation);
+    private double num1;
+    private double num2;
+    private char operation;
+    private double result;
+    public void osnova() {
+        this.num1 = getDouble();
+        this.num2 = getDouble();
+        this.operation = getOperation();
+        this.result = itog(num1,num2,operation);
         System.out.println("Результат операции: " + result);
 
         ArrayList<Double> chislo = new ArrayList<>();
@@ -31,7 +35,7 @@ public class Calculator {
         System.out.println("Очередь: " + myPriorityQueue);
     }
 
-    private static double getDouble() {
+    public static double getDouble() {
         System.out.println("Введите число:");
         double num;
         num = scanner.nextDouble();
@@ -39,7 +43,7 @@ public class Calculator {
         return num;
     }
 
-    private static char getOperation() {
+    public static char getOperation() {
         System.out.println("Введите операцию:");
         char operation;
         operation = scanner.next().charAt(0);
@@ -48,7 +52,7 @@ public class Calculator {
     }
 
 
-    private static double itog(double num1, double num2, char operation) {
+    public static double itog(double num1, double num2, char operation) {
         double result;
         switch (operation) {
             case '+':
